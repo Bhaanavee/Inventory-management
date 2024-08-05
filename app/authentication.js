@@ -107,7 +107,7 @@ function Authentication({ setUser }) {
               Sign In
             </Button>
             <Typography variant="body2" color="#333">
-              Don't have an account?{' '}
+              Do not have an account?{' '}
               <Button onClick={() => setIsSignUp(true)} sx={{ color: '#007BFF' }}>
                 Sign Up
               </Button>
