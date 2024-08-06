@@ -4,7 +4,7 @@ import { Box, Typography, Button, Modal, TextField, Grid, Select, MenuItem, Form
 import { firestore, auth } from '@/firebase.js'; // Ensure the correct path to firebase.js
 import { collection, doc, getDocs, query, setDoc, deleteDoc, getDoc, where } from 'firebase/firestore';
 import { onAuthStateChanged, signOut } from 'firebase/auth';
-import Authentication from './Authentication.jsx'; // Ensure correct path
+import Authentication from './authentication.jsx'; // Ensure correct path
 
 const modalStyle = {
   position: 'absolute',
