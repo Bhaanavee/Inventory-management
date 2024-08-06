@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { auth } from '@/firebase'; // Adjust path as needed
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
 import { Box, TextField, Button, Typography, Paper } from '@mui/material';
+import './style.css';
 
 function Authentication({ setUser }) {
   const [email, setEmail] = useState('');
@@ -39,9 +40,9 @@ function Authentication({ setUser }) {
       minHeight="100vh"
       bgcolor="background.paper"
     >
-      <Typography variant="h3" color="#800080">
-        WELCOME TO SHELVIFY
-      </Typography>
+     <Typography variant="h3" className="title">
+      WELCOME TO SHELVIFY
+    </Typography>
       <br>
       </br>
       <Paper
