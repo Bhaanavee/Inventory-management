@@ -1,5 +1,4 @@
 'use client';
-
 import { useState, useEffect } from 'react';
 import { Box, Typography, Button, Modal, TextField, Grid, Select, MenuItem, FormControl, InputLabel, AppBar, Toolbar } from '@mui/material';
 import { firestore, auth } from '@/firebase.js'; // Ensure the correct path to firebase.js
