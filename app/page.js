@@ -5,7 +5,7 @@ import { Box, Typography, Button, Modal, TextField, Grid, Select, MenuItem, Form
 import { firestore, auth } from '@/firebase.js'; // Ensure the correct path to firebase.js
 import { collection, doc, getDocs, query, setDoc, deleteDoc, getDoc, where } from 'firebase/firestore';
 import { onAuthStateChanged, signOut } from 'firebase/auth';
-import Authentication from '@/Authentication/authentication.js'; // Ensure correct path
+import Authentication from './Authentication.jsx'; // Ensure correct path
 
 const modalStyle = {
   position: 'absolute',
@@ -113,7 +113,7 @@ export default function Home() {
   return (
     <Box width="100%" minHeight="100vh" display="flex" flexDirection="column" alignItems="center" bgcolor="white" padding={2}>
       {user && (
-        <Button variant="contained" onClick={handleSignOut} sx={{ position: 'absolute', top: 16, right: 16 }}>
+        <Button variant="contained" color="secondary" onClick={handleSignOut} sx={{ position: 'absolute', top: 16, right: 16 }}>
           Sign Out
         </Button>
       )}
@@ -159,6 +159,7 @@ export default function Home() {
               </FormControl>
               <Button
                 variant="contained"
+                color="secondary"
                 fullWidth
                 onClick={() => {
                   addItem(itemName, itemCategory);
@@ -172,8 +173,8 @@ export default function Home() {
             </Box>
           </Modal>
           <Box width="100%" maxWidth="800px" overflow="auto" padding={2} marginTop={4}>
-            <Typography variant="h4" color="#333" textAlign="center" marginBottom={2}>
-              Inventory Items
+            <Typography variant="h4" color="#800080" textAlign="center" marginBottom={2}>
+              INVENTORY ITEMS
             </Typography>
             <Grid container spacing={2}>
               {filteredInventory.map(({ name, quantity, category }) => (
@@ -205,7 +206,7 @@ export default function Home() {
               ))}
             </Grid>
           </Box>
-          <Button variant="contained" onClick={handleOpen} sx={{ marginTop: 2 }}>
+          <Button variant="contained" color="secondary" onClick={handleOpen} sx={{ marginTop: 2 }}>
             Add New Item
           </Button>
         </>

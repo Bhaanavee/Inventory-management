@@ -39,6 +39,11 @@ function Authentication({ setUser }) {
       minHeight="100vh"
       bgcolor="background.paper"
     >
+      <Typography variant="h3" color="#800080">
+        WELCOME TO SHELVIFY
+      </Typography>
+      <br>
+      </br>
       <Paper
         elevation={3}
         sx={{
@@ -63,10 +68,10 @@ function Authentication({ setUser }) {
             marginBottom: 2,
             '& .MuiOutlinedInput-root': {
               '&:hover fieldset': {
-                borderColor: '#007BFF',
+                borderColor: '#dda0dd',
               },
               '&.Mui-focused fieldset': {
-                borderColor: '#007BFF',
+                borderColor: '#86608e',
               },
             },
           }}
@@ -81,7 +86,7 @@ function Authentication({ setUser }) {
             marginBottom: 3,
             '& .MuiOutlinedInput-root': {
               '&:hover fieldset': {
-                borderColor: '#007BFF',
+                borderColor: '#dda0dd',
               },
               '&.Mui-focused fieldset': {
                 borderColor: '#007BFF',
@@ -91,24 +96,24 @@ function Authentication({ setUser }) {
         />
         {isSignUp ? (
           <>
-            <Button onClick={handleSignUp} variant="contained" color="primary" fullWidth sx={{ marginBottom: 2 }}>
+            <Button onClick={handleSignUp} variant="contained" color="secondary" fullWidth sx={{ marginBottom: 2 }}>
               Sign Up
             </Button>
             <Typography variant="body2" color="#333">
               Already have an account?{' '}
-              <Button onClick={() => setIsSignUp(false)} sx={{ color: '#007BFF' }}>
+              <Button onClick={() => setIsSignUp(false)} sx={{ color: '#800080' }}>
                 Sign In
               </Button>
             </Typography>
           </>
         ) : (
           <>
-            <Button onClick={handleSignIn} variant="contained" color="primary" fullWidth sx={{ marginBottom: 2 }}>
+            <Button onClick={handleSignIn} variant="contained" color="secondary" fullWidth sx={{ marginBottom: 2 }}>
               Sign In
             </Button>
             <Typography variant="body2" color="#333">
               Do not have an account?{' '}
-              <Button onClick={() => setIsSignUp(true)} sx={{ color: '#007BFF' }}>
+              <Button onClick={() => setIsSignUp(true)} sx={{ color: '#800080' }}>
                 Sign Up
               </Button>
             </Typography>
